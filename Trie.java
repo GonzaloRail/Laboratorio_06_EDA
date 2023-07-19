@@ -1,4 +1,5 @@
 import java.util.*;
+
 class Trie<T> {
     private Node<T> root;
 
@@ -6,22 +7,24 @@ class Trie<T> {
         this.root = new Node<>(null);
     }
 
-    public void insert(List<T> text) {
+    public void insert(String word) {
         Node<T> currentNode = root;
-        for (T letra : text) {
-            Node<T> child = findChild(currentNode, letra);
+        for (char character : word.toCharArray()) {
+            T data = (T) Character.valueOf(character);
+            Node<T> child = findChild(currentNode, data);
             if (child == null) {
-                child = new Node<>(letra);
+                child = new Node<>(data);
                 currentNode.addChild(child);
             }
             currentNode = child;
         }
     }
 
-    public boolean search(List<T> text) {
+    public boolean search(String word) {
         Node<T> currentNode = root;
-        for (T letra : text) {
-            Node<T> child = findChild(currentNode, letra);
+        for (char character : word.toCharArray()) {
+            T data = (T) Character.valueOf(character);
+            Node<T> child = findChild(currentNode, data);
             if (child == null) {
                 return false;
             }
@@ -30,9 +33,9 @@ class Trie<T> {
         return true;
     }
 
-    private Node<T> findChild(Node<T> node, T character) {
+    private Node<T> findChild(Node<T> node, T data) {
         for (Node<T> child : node.getChildren()) {
-            if (child.getData().equals(character)) {
+            if (child.getData().equals(data)) {
                 return child;
             }
         }
