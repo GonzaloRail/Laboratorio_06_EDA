@@ -11,14 +11,54 @@ public class GUI extends JFrame{
     private final int ancho = 500;   
     private final int largo = 300;
 
-    public GUI() {
+    public GUI(String what) {
         this.setSize(ancho, largo);
         this.setTitle("Find and Replace");
         this.setLocationRelativeTo(null);
-        build();
+        if (what.equals("f")) {
+            buildFind();
+        }
+        else {
+            buildReplace();
+        }
     }
 
-    private void build() { 
+    private void buildFind() { 
+        
+        setLayout(new GridLayout(4,1));
+        
+        JPanel optionsPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JPanel options = new JPanel(new GridLayout(1, 2));
+        JButton findButton = new JButton("Buscar");
+        JButton replaceButton = new JButton("Reemplazar");
+        findButton.setEnabled(false);
+        replaceButton.setEnabled(true);
+        options.add(findButton);
+        options.add(replaceButton);
+        optionsPanel.add(options);
+        
+        JPanel findPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel findWhat = new JLabel("Buscar: ");
+        JTextField findWord = new JTextField(10);
+        findPanel.add(findWhat);
+        findPanel.add(findWord);
+
+        JPanel executePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JButton executeFind = new JButton("Buscar");
+        executeFind.setSize(100, 100);
+        executePanel.add(executeFind);
+        
+        add(optionsPanel);
+        add(findPanel);
+        add(executePanel);
+        
+        this.setVisible(true);
+
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+    }
+    
+    private void buildReplace() {
         
         setLayout(new GridLayout(4,1));
         
@@ -57,11 +97,12 @@ public class GUI extends JFrame{
         this.setVisible(true);
 
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-
+        
     }
 
     public static void main(String[] args) {
-        new GUI();
+        new GUI("f");
+        new GUI("a");
     }
 
 }
