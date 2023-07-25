@@ -1,1 +1,0 @@
-# Laboratorio_06_EDA
