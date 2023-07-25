@@ -33,8 +33,9 @@ public class FindAndReplace extends JFrame {
         this.setSize(ancho, largo);
         this.setTitle("Find and Replace");
         this.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(HIDE_ON_CLOSE);
         this.setLayout(new GridLayout(4, 1));
+        this.setResizable(false);
 
         this.executeButton.setSize(100, 100);
 
@@ -42,6 +43,10 @@ public class FindAndReplace extends JFrame {
         this.replaceButton.addActionListener(new move());
 
         this.buildFind();
+    }
+    
+    public JButton getExecute() {
+        return this.executeButton;
     }
 
     public String wordToFind() {
@@ -51,13 +56,10 @@ public class FindAndReplace extends JFrame {
     public String wordForReplace() {
         return this.replaceWord.getText();
     }
-
-    public String wordToFind() {
-        return this.findWord.getText();
-    }
     
-    public String wordToReplace() {
-        return this.replaceWord.getText();
+    public void cleanTextBoxes() {
+        this.findWord.setText("");
+        this.replaceWord.setText("");
     }
 
     private void buildFind() {
