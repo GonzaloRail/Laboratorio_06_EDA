@@ -1,106 +1,98 @@
+import java.util.*;
 public class Trie {
 
-	   private TrieNode root;
+    private TrieNode root;
 
-	   public Trie() {
-	      root = new TrieNode(); // root is empty 
-	   }
+    public Trie() {
+	root = new TrieNode(); // root is empty 
+    }
 
-	   private class TrieNode {
-	      private TrieNode[] children;
-	      private boolean isWord;
+    class TrieNode {
+	TrieNode[] children;
+	boolean isWord;
 
-	      public TrieNode() {
-	         this.children = new TrieNode[26]; // storing english words - a -> z    	    this.isWord = false;
-	      }
-	   }
+	public TrieNode() {
+	    this.children = new TrieNode[26]; // storing english words - a -> z    	    
+	    this.isWord = false;
+	}
+    }
 
-	   public void insert(String word) {
-	      if (word == null || word.isEmpty()) {
-	         throw new IllegalArgumentException("Invalid input");
-	      }
+	public void insert(String word) {
+	    if (word == null || word.isEmpty()) {
+	        throw new IllegalArgumentException("Invalid input");
+	    }
 
-	      word = word.toLowerCase();
+	    word = word.toLowerCase();
 
-	      TrieNode current = root;
-	      for (int i = 0; i < word.length(); i++) {
-	         char c = word.charAt(i);
-	         int index = c - 'a';
-	         if (current.children[index] == null) {
-	            TrieNode node = new TrieNode();
+	    TrieNode current = root;
+	    for (int i = 0; i < word.length(); i++) {
+	        char c = word.charAt(i);
+	        int index = c - 'a';
+	        if (current.children[index] == null) {
+                    TrieNode node = new TrieNode();
 	            current.children[index] = node;
 	            current = node;
-	         } else {
+	        } else {
 	            current = current.children[index];
-	         }
-	      }
-	      current.isWord = true;
+	        }
+	    }
+	    current.isWord = true;
 
-	   }
+	}
 
-	   public boolean search(String word) {
-	      if (word == null || word.isEmpty()) {
-	         return false;
-	      }
+	public boolean search(String word) {
+	    if (word == null || word.isEmpty()) {
+	        return false;
+	    }
 
-	      word = word.toLowerCase();
+	    word = word.toLowerCase();
 
-	      TrieNode current = root;
-	      for (int i = 0; i < word.length(); i++) {
-	         char c = word.charAt(i);
-	         int index = c - 'a';
-	         if (current.children[index] == null) {
-	            return false;
-	         }
-	         current = current.children[index];
-	      }
+	    TrieNode current = root;
+	    for (int i = 0; i < word.length(); i++) {
+	        char c = word.charAt(i);
+	        int index = c - 'a';
+	        if (current.children[index] == null) {
+                    return false;
+	        }
+	        current = current.children[index];
+	    }
 
-	      return current.isWord;
-	   }
+	    return current.isWord;
+	}
 
-	   public void delete(String word) {
-	      if (word == null || word.isEmpty()) {
-	         return;
-	      }
+	public void delete(String word) {
+            if (word == null || word.isEmpty()) {
+                throw new IllegalArgumentException("Invalid input");
+            }
 
-	      word = word.toLowerCase();
+            word = word.toLowerCase();
 
-	      delete(root, word, 0);
-	   }
+            if (!search(word)) {
+                throw new NoSuchElementException("Word not found in the Trie");
+            }
 
-	   private boolean delete(TrieNode current, String word, int index) {
-	      if (index == word.length()) {
-	         if (!current.isWord) {
-	            return false; // The word doesn't exist in the Trie
-	         }
-	         current.isWord = false;
-	         // Return true if the current node has no other children (can be deleted)
-	         return noChildren(current);
-	      }
+            TrieNode current = root;
+            for (int i = 0; i < word.length(); i++) {
+                char c = word.charAt(i);
+                int index = c - 'a';
+                if (current.children[index] == null) {
+                    throw new NoSuchElementException("Word not found in the Trie");
+                }
+                current = current.children[index];
+            }
 
-	      char c = word.charAt(index);
-	      int childIndex = c - 'a';
-	      TrieNode child = current.children[childIndex];
-	      if (child == null) {
-	         return false; // The word doesn't exist in the Trie
-	      }
+            current.isWord = false;
+        }
 
-	      boolean shouldDeleteChild = delete(child, word, index + 1);
-	      if (shouldDeleteChild) {
-	         current.children[childIndex] = null;
-	         // Return true if the current node has no other children (can be deleted)
-	         return !current.isWord && noChildren(current);
-	      }
+        public void replace(String wordToReplace, String replacementWord) {
+            if (wordToReplace == null || wordToReplace.isEmpty() || replacementWord == null || replacementWord.isEmpty()) {
+                throw new IllegalArgumentException("Invalid input");
+            }
 
-	      return false;
-	   }
+            wordToReplace = wordToReplace.toLowerCase();
+            replacementWord = replacementWord.toLowerCase();
 
-	   private boolean noChildren(TrieNode node) {
-	      for (TrieNode child : node.children) {
-	         if (child != null) {
-	            return false;
-	         }
-	      }
-	      return true;
-	   }
+            delete(wordToReplace);
+            insert(replacementWord);
+    }
 }
