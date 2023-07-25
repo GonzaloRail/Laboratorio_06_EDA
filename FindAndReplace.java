@@ -42,8 +42,14 @@ public class FindAndReplace extends JFrame {
         this.replaceButton.addActionListener(new move());
 
         this.buildFind();
+    }
 
-        this.setVisible(true);
+    public String wordToFind() {
+        return this.findWord.getText();
+    }
+    
+    public String wordForReplace() {
+        return this.replaceWord.getText();
     }
 
     public String wordToFind() {
@@ -131,10 +137,6 @@ public class FindAndReplace extends JFrame {
 
             revalidatePanels();
         }
-    }
-
-    public static void main(String[] args) {
-        new FindAndReplace();
     }
 
 }
