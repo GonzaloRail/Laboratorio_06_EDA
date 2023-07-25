@@ -25,7 +25,7 @@ public class TextToWork extends JFrame {
 
     private final JPanel textPanel = new JPanel(new BorderLayout());
     private final JPanel textViewPanel = new JPanel(new BorderLayout());
-    private final JPanel buttons = new JPanel(new FlowLayout(FlowLayout.CENTER));
+    private final JPanel buttons = new JPanel(new FlowLayout(FlowLayout.LEFT));
 
     private final JLabel indication = new JLabel("Inserte su texto aqui:");
     private final JLabel indication2 = new JLabel("Su texto:");
@@ -37,6 +37,8 @@ public class TextToWork extends JFrame {
     private final JScrollPane textViewArea = new JScrollPane(textView);
 
     private final JButton showOptions = new JButton("Buscar y Reemplazar");
+    private final JButton insertToFinal = new JButton("Insertar al final");
+    private final JButton insertReplace = new JButton("Insertar en lugar del texto ya existente");
 
     private final EmptyBorder border = new EmptyBorder(topSpace, leftSpace, bottomSpace, rightSpace);
 
@@ -83,6 +85,8 @@ public class TextToWork extends JFrame {
 
         this.add(textPanel);
 
+        buttons.add(insertToFinal);
+        buttons.add(insertReplace);
         buttons.add(showOptions);
 
         textViewPanel.add(indication2, BorderLayout.NORTH);
@@ -106,10 +110,26 @@ public class TextToWork extends JFrame {
             
             operations.cleanTextBoxes();
         });
-
+        
+        this.insertToFinal.addActionListener((ActionEvent e) -> {
+            this.textView.setText(this.textView.getText() + this.text.getText());
+            this.text.setText("");
+        });
+        
+        this.insertReplace.addActionListener((ActionEvent e) -> {
+            this.textView.setText(this.text.getText());
+            this.text.setText("");
+        });
+        
         this.showOptions.addActionListener((ActionEvent e) -> {
-            this.operations.setVisible(true);
-            this.setEnabled(false);
+            if (this.textView.getText().isBlank()) {
+                JOptionPane.showMessageDialog(this, "No se ha insertado texto o solo hay espacios", "Advertencia", 
+                                              JOptionPane.WARNING_MESSAGE);
+            }
+            else {
+                this.operations.setVisible(true);
+                this.setEnabled(false);
+            }
         });
 
         this.addWindowListener(new WindowAdapter() {
