@@ -110,10 +110,6 @@ public class TrieGUI extends JFrame implements design{
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                new TrieGUI();
-            }
-        });
+        new TrieGUI();
     }
 }
