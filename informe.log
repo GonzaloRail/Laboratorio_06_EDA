@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.6)  25 JUL 2023 20:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.6)  26 JUL 2023 13:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -781,12 +781,12 @@ Overfull \hbox (0.89597pt too wide) in paragraph at lines 151--159
 (C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-<img/logo_episunsa.png, id=67, 195.73125pt x 58.2175pt>
+<img/logo_episunsa.png, id=63, 195.73125pt x 58.2175pt>
 File: img/logo_episunsa.png Graphic file (type png)
 <use img/logo_episunsa.png>
 Package pdftex.def Info: img/logo_episunsa.png  used on input line 180.
 (pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
-<img/logo_abet.png, id=68, 58.2175pt x 65.24374pt>
+<img/logo_abet.png, id=64, 58.2175pt x 65.24374pt>
 File: img/logo_abet.png Graphic file (type png)
 <use img/logo_abet.png>
 Package pdftex.def Info: img/logo_abet.png  used on input line 180.
@@ -936,18 +936,18 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.51407pt}.
 
 [8])
-<pruebas/visual1.png, id=449, 301.125pt x 363.15675pt>
+<pruebas/visual1.png, id=445, 301.125pt x 363.15675pt>
 File: pruebas/visual1.png Graphic file (type png)
 <use pruebas/visual1.png>
-Package pdftex.def Info: pruebas/visual1.png  used on input line 216.
+Package pdftex.def Info: pruebas/visual1.png  used on input line 217.
 (pdftex.def)             Requested size: 257.4875pt x 310.52994pt.
 File: img/logo_episunsa.png Graphic file (type png)
 <use img/logo_episunsa.png>
-Package pdftex.def Info: img/logo_episunsa.png  used on input line 220.
+Package pdftex.def Info: img/logo_episunsa.png  used on input line 221.
 (pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
 File: img/logo_abet.png Graphic file (type png)
 <use img/logo_abet.png>
-Package pdftex.def Info: img/logo_abet.png  used on input line 220.
+Package pdftex.def Info: img/logo_abet.png  used on input line 221.
 (pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
 
 
@@ -959,17 +959,18 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.51407pt}.
 
 [9 <./pruebas/visual1.png>]
-File: pruebas/visual1.png Graphic file (type png)
-<use pruebas/visual1.png>
-Package pdftex.def Info: pruebas/visual1.png  used on input line 230.
-(pdftex.def)             Requested size: 257.4875pt x 310.52994pt.
+<pruebas/visual2.png, id=455, 307.1475pt x 365.56575pt>
+File: pruebas/visual2.png Graphic file (type png)
+<use pruebas/visual2.png>
+Package pdftex.def Info: pruebas/visual2.png  used on input line 228.
+(pdftex.def)             Requested size: 260.88445pt x 310.50365pt.
 File: img/logo_episunsa.png Graphic file (type png)
 <use img/logo_episunsa.png>
-Package pdftex.def Info: img/logo_episunsa.png  used on input line 234.
+Package pdftex.def Info: img/logo_episunsa.png  used on input line 230.
 (pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
 File: img/logo_abet.png Graphic file (type png)
 <use img/logo_abet.png>
-Package pdftex.def Info: img/logo_abet.png  used on input line 234.
+Package pdftex.def Info: img/logo_abet.png  used on input line 230.
 (pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
 
 
@@ -982,19 +983,19 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 [10
 
-]
-<pruebas/visual2.png, id=464, 307.1475pt x 365.56575pt>
-File: pruebas/visual2.png Graphic file (type png)
-<use pruebas/visual2.png>
-Package pdftex.def Info: pruebas/visual2.png  used on input line 241.
-(pdftex.def)             Requested size: 260.88445pt x 310.50365pt.
+ <./pruebas/visual2.png>]
+<pruebas/insert.png, id=462, 305.943pt x 364.36125pt>
+File: pruebas/insert.png Graphic file (type png)
+<use pruebas/insert.png>
+Package pdftex.def Info: pruebas/insert.png  used on input line 236.
+(pdftex.def)             Requested size: 260.72966pt x 310.51466pt.
 File: img/logo_episunsa.png Graphic file (type png)
 <use img/logo_episunsa.png>
-Package pdftex.def Info: img/logo_episunsa.png  used on input line 243.
+Package pdftex.def Info: img/logo_episunsa.png  used on input line 238.
 (pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
 File: img/logo_abet.png Graphic file (type png)
 <use img/logo_abet.png>
-Package pdftex.def Info: img/logo_abet.png  used on input line 243.
+Package pdftex.def Info: img/logo_abet.png  used on input line 238.
 (pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
 
 
@@ -1007,19 +1008,19 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 [11
 
- <./pruebas/visual2.png>]
-<pruebas/insert.png, id=471, 305.943pt x 364.36125pt>
-File: pruebas/insert.png Graphic file (type png)
-<use pruebas/insert.png>
-Package pdftex.def Info: pruebas/insert.png  used on input line 249.
-(pdftex.def)             Requested size: 260.72966pt x 310.51466pt.
+ <./pruebas/insert.png>]
+<pruebas/search.png, id=469, 307.74976pt x 367.97475pt>
+File: pruebas/search.png Graphic file (type png)
+<use pruebas/search.png>
+Package pdftex.def Info: pruebas/search.png  used on input line 242.
+(pdftex.def)             Requested size: 259.68669pt x 310.506pt.
 File: img/logo_episunsa.png Graphic file (type png)
 <use img/logo_episunsa.png>
-Package pdftex.def Info: img/logo_episunsa.png  used on input line 251.
+Package pdftex.def Info: img/logo_episunsa.png  used on input line 244.
 (pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
 File: img/logo_abet.png Graphic file (type png)
 <use img/logo_abet.png>
-Package pdftex.def Info: img/logo_abet.png  used on input line 251.
+Package pdftex.def Info: img/logo_abet.png  used on input line 244.
 (pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
 
 
@@ -1032,19 +1033,24 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 [12
 
- <./pruebas/insert.png>]
-<pruebas/search.png, id=478, 307.74976pt x 367.97475pt>
-File: pruebas/search.png Graphic file (type png)
-<use pruebas/search.png>
-Package pdftex.def Info: pruebas/search.png  used on input line 255.
-(pdftex.def)             Requested size: 259.68669pt x 310.506pt.
+ <./pruebas/search.png>]
+<pruebas/replace1.png, id=476, 305.34074pt x 364.9635pt>
+File: pruebas/replace1.png Graphic file (type png)
+<use pruebas/replace1.png>
+Package pdftex.def Info: pruebas/replace1.png  used on input line 248.
+(pdftex.def)             Requested size: 185.55872pt x 221.79207pt.
+<pruebas/replace2.png, id=477, 304.7385pt x 362.5545pt>
+File: pruebas/replace2.png Graphic file (type png)
+<use pruebas/replace2.png>
+Package pdftex.def Info: pruebas/replace2.png  used on input line 252.
+(pdftex.def)             Requested size: 186.4203pt x 221.78859pt.
 File: img/logo_episunsa.png Graphic file (type png)
 <use img/logo_episunsa.png>
-Package pdftex.def Info: img/logo_episunsa.png  used on input line 257.
+Package pdftex.def Info: img/logo_episunsa.png  used on input line 254.
 (pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
 File: img/logo_abet.png Graphic file (type png)
 <use img/logo_abet.png>
-Package pdftex.def Info: img/logo_abet.png  used on input line 257.
+Package pdftex.def Info: img/logo_abet.png  used on input line 254.
 (pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
 
 
@@ -1057,24 +1063,39 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 [13
 
- <./pruebas/search.png>]
-<pruebas/replace1.png, id=486, 305.34074pt x 364.9635pt>
-File: pruebas/replace1.png Graphic file (type png)
-<use pruebas/replace1.png>
-Package pdftex.def Info: pruebas/replace1.png  used on input line 261.
-(pdftex.def)             Requested size: 185.55872pt x 221.79207pt.
-<pruebas/replace2.png, id=487, 304.7385pt x 362.5545pt>
-File: pruebas/replace2.png Graphic file (type png)
-<use pruebas/replace2.png>
-Package pdftex.def Info: pruebas/replace2.png  used on input line 265.
-(pdftex.def)             Requested size: 186.4203pt x 221.78859pt.
+ <./pruebas/replace1.png> <./pruebas/replace2.png>]
+<pruebas/commits1.png, id=487, 799.18575pt x 476.982pt>
+File: pruebas/commits1.png Graphic file (type png)
+<use pruebas/commits1.png>
+Package pdftex.def Info: pruebas/commits1.png  used on input line 264.
+(pdftex.def)             Requested size: 221.78276pt x 132.3677pt.
+<pruebas/commits2.png, id=488, 820.2645pt x 274.02374pt>
+File: pruebas/commits2.png Graphic file (type png)
+<use pruebas/commits2.png>
+Package pdftex.def Info: pruebas/commits2.png  used on input line 268.
+(pdftex.def)             Requested size: 221.78728pt x 74.09192pt.
+<pruebas/commits3.png, id=489, 820.2645pt x 233.07076pt>
+File: pruebas/commits3.png Graphic file (type png)
+<use pruebas/commits3.png>
+Package pdftex.def Info: pruebas/commits3.png  used on input line 272.
+(pdftex.def)             Requested size: 221.78728pt x 63.01884pt.
+<pruebas/commits4.png, id=490, 838.332pt x 446.26724pt>
+File: pruebas/commits4.png Graphic file (type png)
+<use pruebas/commits4.png>
+Package pdftex.def Info: pruebas/commits4.png  used on input line 276.
+(pdftex.def)             Requested size: 221.78595pt x 118.06277pt.
+<pruebas/commits5.png, id=491, 817.25325pt x 312.56775pt>
+File: pruebas/commits5.png Graphic file (type png)
+<use pruebas/commits5.png>
+Package pdftex.def Info: pruebas/commits5.png  used on input line 280.
+(pdftex.def)             Requested size: 221.78365pt x 84.82365pt.
 File: img/logo_episunsa.png Graphic file (type png)
 <use img/logo_episunsa.png>
-Package pdftex.def Info: img/logo_episunsa.png  used on input line 267.
+Package pdftex.def Info: img/logo_episunsa.png  used on input line 286.
 (pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
 File: img/logo_abet.png Graphic file (type png)
 <use img/logo_abet.png>
-Package pdftex.def Info: img/logo_abet.png  used on input line 267.
+Package pdftex.def Info: img/logo_abet.png  used on input line 286.
 (pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
 
 
@@ -1087,14 +1108,15 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 [14
 
- <./pruebas/replace1.png> <./pruebas/replace2.png>]
+ <./pruebas/commits1.png> <./pruebas/commits2.png> <./pruebas/commits3.png> <./
+pruebas/commits4.png> <./pruebas/commits5.png>]
 File: img/logo_episunsa.png Graphic file (type png)
 <use img/logo_episunsa.png>
-Package pdftex.def Info: img/logo_episunsa.png  used on input line 297.
+Package pdftex.def Info: img/logo_episunsa.png  used on input line 309.
 (pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
 File: img/logo_abet.png Graphic file (type png)
 <use img/logo_abet.png>
-Package pdftex.def Info: img/logo_abet.png  used on input line 297.
+Package pdftex.def Info: img/logo_abet.png  used on input line 309.
 (pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
 
 
@@ -1105,25 +1127,23 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.51407pt}.
 
-[15
-
-]
-Overfull \hbox (4.41283pt too wide) in paragraph at lines 307--317
+[15]
+Overfull \hbox (4.41283pt too wide) in paragraph at lines 319--329
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--317
+Underfull \hbox (badness 10000) in paragraph at lines 319--329
 
  []
 
 File: img/logo_episunsa.png Graphic file (type png)
 <use img/logo_episunsa.png>
-Package pdftex.def Info: img/logo_episunsa.png  used on input line 319.
+Package pdftex.def Info: img/logo_episunsa.png  used on input line 331.
 (pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
 File: img/logo_abet.png Graphic file (type png)
 <use img/logo_abet.png>
-Package pdftex.def Info: img/logo_abet.png  used on input line 319.
+Package pdftex.def Info: img/logo_abet.png  used on input line 331.
 (pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -1136,37 +1156,37 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 [16
 
 ]
-Overfull \hbox (5.9124pt too wide) in paragraph at lines 351--351
+Overfull \hbox (5.9124pt too wide) in paragraph at lines 363--363
 []|\OT1/cmr/m/n/10 Checklist| 
  []
 
 
-Overfull \hbox (4.45987pt too wide) in paragraph at lines 351--351
+Overfull \hbox (4.45987pt too wide) in paragraph at lines 363--363
 []|\OT1/cmr/m/n/10 Estudiante| 
  []
 
 
-Overfull \hbox (4.7852pt too wide) in paragraph at lines 351--352
+Overfull \hbox (4.7852pt too wide) in paragraph at lines 363--364
 []|\OT1/cmr/m/n/10 Profesor| 
  []
 
 
-Overfull \hbox (40.32231pt too wide) in paragraph at lines 349--375
+Overfull \hbox (40.32231pt too wide) in paragraph at lines 361--387
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--375
+Underfull \hbox (badness 10000) in paragraph at lines 361--387
 
  []
 
 File: img/logo_episunsa.png Graphic file (type png)
 <use img/logo_episunsa.png>
-Package pdftex.def Info: img/logo_episunsa.png  used on input line 377.
+Package pdftex.def Info: img/logo_episunsa.png  used on input line 389.
 (pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
 File: img/logo_abet.png Graphic file (type png)
 <use img/logo_abet.png>
-Package pdftex.def Info: img/logo_abet.png  used on input line 377.
+Package pdftex.def Info: img/logo_abet.png  used on input line 389.
 (pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
 
 Package fancyhdr Warning: \headheight is too small (30.0pt): 
@@ -1181,11 +1201,11 @@ Package fancyhdr Warning: \headheight is too small (30.0pt):
 ]
 File: img/logo_episunsa.png Graphic file (type png)
 <use img/logo_episunsa.png>
-Package pdftex.def Info: img/logo_episunsa.png  used on input line 390.
+Package pdftex.def Info: img/logo_episunsa.png  used on input line 402.
 (pdftex.def)             Requested size: 85.35826pt x 25.38835pt.
 File: img/logo_abet.png Graphic file (type png)
 <use img/logo_abet.png>
-Package pdftex.def Info: img/logo_abet.png  used on input line 390.
+Package pdftex.def Info: img/logo_abet.png  used on input line 402.
 (pdftex.def)             Requested size: 34.14322pt x 38.26549pt.
 
 
@@ -1204,31 +1224,35 @@ LaTeX Info: Redefining \% on input line 23.
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: E79AA873DC29DAA2F47FF25EB58C94E6;2678.
+
+Package rerunfilecheck Warning: File `informe.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `informe.out':
+(rerunfilecheck)             Before: 5342B040DED5A24DAB3A0B424D48CDE7;2407
+(rerunfilecheck)             After:  0093182975BE6537AB9E14B1A610C7C4;2500.
  ) 
 Here is how much of TeX's memory you used:
- 18214 strings out of 476331
- 310548 string characters out of 5787294
+ 18249 strings out of 476331
+ 311374 string characters out of 5787294
  1944660 words of memory out of 5000000
- 37959 multiletter control sequences out of 15000+600000
- 515502 words of font info for 44 fonts, out of 8000000 for 9000
+ 37986 multiletter control sequences out of 15000+600000
+ 515162 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,17n,92p,512b,2179s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Lenovo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcb
-x1000.pk><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmbx10.pfb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/Lenovo/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lenovo/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Lenovo/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Lenovo
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Us
-ers/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.p
-fb>
-Output written on informe.pdf (18 pages, 293399 bytes).
+<C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmbx10.pfb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmbx7.pfb><C:/Users/Lenovo/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lenovo/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Lenovo/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Lenovo/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Len
+ovo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on informe.pdf (18 pages, 536647 bytes).
 PDF statistics:
- 636 PDF objects out of 1000 (max. 8388607)
- 382 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 643 PDF objects out of 1000 (max. 8388607)
+ 386 named destinations out of 1000 (max. 500000)
+ 190 words of extra memory for PDF output out of 10000 (max. 10000000)
 
