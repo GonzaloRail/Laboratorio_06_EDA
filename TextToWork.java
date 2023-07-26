@@ -1,134 +1,144 @@
-import javax.swing.JFrame;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
-import javax.swing.border.EmptyBorder;
-import java.awt.BorderLayout;
-import java.awt.GridLayout;
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import javax.swing.*;
+import javax.swing.border.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
 
-public class TextToWork extends JFrame {
-
-    private final int ancho = 600;
-    private final int largo = 600;
-
+public class TextToWork extends JFrame implements design{
+    Trie trie;
     private final int topSpace = 5;
     private final int leftSpace = 5;
     private final int bottomSpace = 5;
     private final int rightSpace = 5;
 
-    private final JPanel textPanel = new JPanel(new BorderLayout());
-    private final JPanel textViewPanel = new JPanel(new BorderLayout());
-    private final JPanel buttons = new JPanel(new FlowLayout(FlowLayout.LEFT));
+    private final EmptyBorder border = new EmptyBorder(topSpace, leftSpace, bottomSpace, rightSpace);
 
-    private final JLabel indication = new JLabel("Inserte su texto aqui:");
-    private final JLabel indication2 = new JLabel("Su texto:");
+    private final JPanel inputPanel = new JPanel(new BorderLayout());
+    private final JPanel contentPanel = new JPanel(new BorderLayout());
+    private final JPanel outputPanel = new JPanel(new BorderLayout());
+    private final JPanel buttonPanel = new JPanel();
+    
+    private final JLabel indication = new JLabel("Ingrese palabras:");
+    private final JLabel indication2 = new JLabel("Contenido:");
+    private final JLabel indication3 = new JLabel("Output:");
 
-    private final JTextArea text = new JTextArea();
-    private final JTextArea textView = new JTextArea();
+    private final JTextField inputField = new JTextField(40);
 
-    private final JScrollPane textArea = new JScrollPane(text);
-    private final JScrollPane textViewArea = new JScrollPane(textView);
+    private final JTextArea consoleTextArea = new JTextArea(10,10);
+    private final JTextArea contentTextArea = new JTextArea(10,10);
+
+    private final JScrollPane scrollConsole = new JScrollPane(consoleTextArea);
+    private final JScrollPane scrollContent = new JScrollPane(contentTextArea);
 
     private final JButton showOptions = new JButton("Buscar y Reemplazar");
-    private final JButton insertToFinal = new JButton("Insertar al final");
-    private final JButton insertReplace = new JButton("Insertar en lugar del texto ya existente");
-
-    private final EmptyBorder border = new EmptyBorder(topSpace, leftSpace, bottomSpace, rightSpace);
+    private final JButton insertToFinal = new JButton("Insertar");
+    private final JButton insertReplace = new JButton("Limpiar");
 
     private final FindAndReplace operations = new FindAndReplace();
 
     public TextToWork() {
-        this.setSize(ancho, largo);
-        this.setTitle("Find and Replace");
-        this.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-        this.setLayout(new GridLayout(2, 1));
-        this.setResizable(false);
+        trie = new Trie();
 
-        this.showOptions.setSize(200, 100);
-
-        //las siguientes 5 lineas se refieren a que las cajas de texto se ajustara al JFrame, es decir, hará un salto de linea si ya ocupó todo el ancho.
-        this.text.setLineWrap(true);
-        this.text.setWrapStyleWord(true);
-        this.textView.setLineWrap(true);
-        this.textView.setWrapStyleWord(true);
-        this.textView.setEditable(false);
-
-        //las siguientes 5 lineas se usan para crear espacios alrededor de los objetos especificados
+        /*las siguientes 5 lineas se usan para crear espacios alrededor de los objetos especificados*/
         this.indication.setBorder(border);
-        this.textArea.setBorder(border);
+        this.inputField.setBorder(border);
         this.indication2.setBorder(border);
-        this.textViewArea.setBorder(border);
-        this.buttons.setBorder(border);
+        this.scrollConsole.setBorder(border);
+        this.scrollContent.setBorder(border);
+        this.buttonPanel.setBorder(border);
         
-        //estas 2 líneas agregan una barra de desplazamiento vertical a las caja de texto (JScrollPane) 
-        textArea.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        textViewArea.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        consoleTextArea.setFont(buttonFont);
+        contentTextArea.setFont(buttonFont);
+        showOptions.setFont(buttonFont);
+        insertToFinal.setFont(buttonFont);
+        insertReplace.setFont(buttonFont);
+        indication.setFont(buttonFont);
+        indication2.setFont(buttonFont);
+        indication3.setFont(buttonFont);
+
+        showOptions.setBackground(buttonColor);
+        insertToFinal.setBackground(buttonColor);
+        insertReplace.setBackground(buttonColor);
 
         build();
         setVisible(true);
     }
 
     private void build() {
-
         buildListeners();
 
-        textPanel.add(indication, BorderLayout.NORTH);
-        textPanel.add(textArea, BorderLayout.CENTER);
+        buttonPanel.add(insertToFinal);
+        buttonPanel.add(insertReplace);
+        buttonPanel.add(showOptions);
 
-        this.add(textPanel);
+        inputPanel.add(indication, BorderLayout.NORTH);
+        inputPanel.add(inputField, BorderLayout.CENTER);
+        
+        outputPanel.add(indication3, BorderLayout.NORTH);
+        outputPanel.add(scrollConsole, BorderLayout.CENTER);
 
-        buttons.add(insertToFinal);
-        buttons.add(insertReplace);
-        buttons.add(showOptions);
+        contentPanel.add(indication2, BorderLayout.NORTH);
+        contentPanel.add(scrollContent, BorderLayout.CENTER);
 
-        textViewPanel.add(indication2, BorderLayout.NORTH);
-        textViewPanel.add(textViewArea, BorderLayout.CENTER);
-        textViewPanel.add(buttons, BorderLayout.SOUTH);
+        JPanel global = new JPanel(new BorderLayout());
+        global.add(inputPanel, BorderLayout.NORTH);
+        global.add(outputPanel, BorderLayout.CENTER);
+        global.add(contentPanel, BorderLayout.SOUTH);
 
-        this.add(textViewPanel);
+        JPanel mainPanel = new JPanel(new BorderLayout());
+        mainPanel.add(global, BorderLayout.CENTER);
+        mainPanel.add(buttonPanel, BorderLayout.SOUTH);
+
+        add(mainPanel);
+
+        
+        this.setTitle("Laboratorio 06");
+        pack();
+        this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+        this.setLocationRelativeTo(null);
     }
 
     private void buildListeners() {
 
         this.operations.getExecute().addActionListener((ActionEvent e) -> {
             String wordToFind = operations.wordToFind();
-            
             if (operations.getExecute().getText().equals("Buscar")) {
-
-            } 
-            else if (operations.getExecute().getText().equals("Reemplazar")) {
+                searchWordInTrie(wordToFind);
+            } else if (operations.getExecute().getText().equals("Reemplazar")) {
                 String wordForReplace = operations.wordForReplace();
+                replaceWordInTrie(wordToFind, wordForReplace);
             }
-            
             operations.cleanTextBoxes();
         });
         
         this.insertToFinal.addActionListener((ActionEvent e) -> {
-            this.textView.setText(this.textView.getText() + this.text.getText());
-            this.text.setText("");
+            String input = inputField.getText();
+                String[] wordsToInsert = input.split("\\s+"); // Divide la cadena en palabras individuales
+
+                try {
+                    trie.insertList(wordsToInsert);
+                    logToConsole("Inserted: " + Arrays.toString(wordsToInsert));
+                    logToContent();
+                } catch (IllegalArgumentException ex) {
+                    logToConsole("Invalid input");
+                }
+                inputField.setText("");
         });
         
         this.insertReplace.addActionListener((ActionEvent e) -> {
-            this.textView.setText(this.text.getText());
-            this.text.setText("");
+            consoleTextArea.setText(this.inputField.getText());
+            contentTextArea.setText(this.inputField.getText());
+            trie.clear();
+            this.inputField.setText("");
         });
         
         this.showOptions.addActionListener((ActionEvent e) -> {
-            if (this.textView.getText().isBlank()) {
-                JOptionPane.showMessageDialog(this, "No se ha insertado texto o solo hay espacios", "Advertencia", 
-                                              JOptionPane.WARNING_MESSAGE);
-            }
-            else {
-                this.operations.setVisible(true);
-                this.setEnabled(false);
+            if (consoleTextArea.getText().isBlank()) {
+                JOptionPane.showMessageDialog(this, "No se ha insertado texto o solo hay espacios", "Advertencia",
+                    JOptionPane.WARNING_MESSAGE);
+            } else {
+                operations.setVisible(true);
+                setEnabled(false);
             }
         });
 
@@ -146,6 +156,31 @@ public class TextToWork extends JFrame {
             }
         });
     }
+    
+    private void searchWordInTrie(String word) {
+        boolean found = trie.search(word);
+        logToConsole("Search: " + word + " -> " + found);
+    }
+    
+    private void replaceWordInTrie(String wordToReplace, String replacementWord) {
+        try {
+            trie.replace(wordToReplace, replacementWord);
+            logToConsole("Replaced: " + wordToReplace + " with " + replacementWord);
+            logToContent();
+        } catch (IllegalArgumentException | NoSuchElementException ex) {
+            logToConsole(ex.getMessage());
+        }
+    }
+    
+    private void logToConsole(String message) {
+        consoleTextArea.append(message + "\n");
+        consoleTextArea.setCaretPosition(consoleTextArea.getDocument().getLength());
+    }
+    
+    private void logToContent() {
+        contentTextArea.setText(trie.getContent());
+    }
+    
 
     private void close() {
         int confirmation = JOptionPane.showConfirmDialog(this, "¿Está seguro de querer cerrar la aplicación?", "Advertencia",

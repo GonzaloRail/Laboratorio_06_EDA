@@ -1,16 +1,11 @@
-import javax.swing.JFrame;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import java.awt.GridLayout;
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.*;
+import javax.swing.border.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
 
-public class FindAndReplace extends JFrame {
-
-    private final int ancho = 500;
+public class FindAndReplace extends JFrame implements design{
+    private final int ancho = 285;
     private final int largo = 200;
 
     private final JPanel options = new JPanel(new GridLayout(1, 2));
@@ -36,6 +31,14 @@ public class FindAndReplace extends JFrame {
         this.setDefaultCloseOperation(HIDE_ON_CLOSE);
         this.setLayout(new GridLayout(4, 1));
         this.setResizable(false);
+
+        findButton.setFont(buttonFont);
+        replaceButton.setFont(buttonFont);
+        executeButton.setFont(buttonFont);
+        findWhat.setFont(buttonFont);
+        replaceWhat.setFont(buttonFont);
+
+        executeButton.setBackground(buttonColorClick);
 
         this.executeButton.setSize(100, 100);
 
@@ -64,7 +67,9 @@ public class FindAndReplace extends JFrame {
 
     private void buildFind() {
         findButton.setEnabled(false);
+        findButton.setBackground(buttonColorDeactivate);
         replaceButton.setEnabled(true);
+        replaceButton.setBackground(buttonColor);
 
         options.add(findButton);
         options.add(replaceButton);
@@ -85,6 +90,8 @@ public class FindAndReplace extends JFrame {
     private void buildReplace() {
         findButton.setEnabled(true);
         replaceButton.setEnabled(false);
+        replaceButton.setBackground(buttonColorDeactivate);
+        findButton.setBackground(buttonColor);
 
         options.add(findButton);
         options.add(replaceButton);
